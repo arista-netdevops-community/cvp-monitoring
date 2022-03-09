@@ -135,17 +135,25 @@ If using  ssh tunnel e.g.: `ssh -nNT -L 9090:localhost:9090 root@<CVP_IP>` the f
 ## General server metrics:
 
 Load Average: [node_load1](http://localhost:9090/graph?g0.range_input=12h&g0.expr=node_load1&g0.tab=0)
+
 Better look at cpu %: [100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)](http://localhost:9090/graph?g0.expr=100%20-%20(avg%20by%20(instance)%20(irate(node_cpu_seconds_total%7Bmode%3D%22idle%22%7D%5B5m%5D))%20*%20100)&g0.tab=0&g0.stacked=0&g0.show_exemplars=0&g0.range_input=1w)
+
 I/O wait: [avg by (instance) (irate(node_cpu_seconds_total{mode="iowait"}[5m])) * 100](http://localhost:9090/graph?g0.range_input=6h&g0.expr=avg%20by%20(instance)%20(irate(node_cpu_seconds_total%7Bmode%3D%22iowait%22%7D%5B5m%5D))%20*%20100&g0.tab=0)
+
 Disk writes per second: [irate(node_disk_written_bytes_total[2m])](http://localhost:9090/graph?g0.range_input=1h&g0.expr=irate(node_disk_written_bytes_total%5B2m%5D)&g0.tab=0)
+
 Disk reads a second: [irate(node_disk_read_bytes_total[2m])](http://localhost:9090/graph?g0.range_input=1h&g0.expr=irate(node_disk_read_bytes_total%5B2m%5D)&g0.tab=0)
+
 Hadoop bytes read: [irate(hadoop_datanode_bytesread[2m])](http://10.83.12.79:9090/graph?g0.range_input=12h&g0.expr=irate(hadoop_datanode_bytesread%5B2m%5D)&g0.tab=0)
+
 Percent disk used: [100 - ((node_filesystem_avail_bytes * 100) / node_filesystem_size_bytes)](http://localhost:9090/graph?g0.range_input=8w&g0.expr=100%20-%20((node_filesystem_avail_bytes%20*%20100)%20%2F%20node_filesystem_size_bytes)&g0.tab=0)
+
 Available memory: [node_memory_MemAvailable_bytes](http://localhost:9090/graph?g0.expr=node_memory_MemAvailable_bytes&g0.tab=0&g0.stacked=0&g0.show_exemplars=0&g0.range_input=1w)
 
 ## Per-process metrics:
 
 memory utilization: [process_resident_memory_bytes](http://localhost:9090/graph?g0.range_input=1d&g0.expr=process_resident_memory_bytes&g0.tab=0)
+
 Cpu utilization: http://localhost:9090/graph?g0.range_input=1d&g0.expr=irate(process_cpu_seconds_total%5B5m%5D)&g0.tab=0
 
 Kafka lag for dispatcher: [max(kafka_log_log_value{topic="postDB_v2", name="LogEndOffset"}) by (partition, topic) - max(offset_consumed{topic="postDB_v2"}) by (topic, partition)](http://localhost:9090/graph?g0.range_input=1h&g0.expr=max(kafka_log_log_value%7Btopic%3D%22postDB_v2%22%2C%20name%3D%22LogEndOffset%22%7D)%20by%20(partition%2C%20topic)%20-%20max(offset_consumed%7Btopic%3D%22postDB_v2%22%7D)%20by%20(topic%2C%20partition)&g0.tab=0)
