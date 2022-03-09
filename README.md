@@ -1,6 +1,6 @@
 # Monitoring CloudVision with Prometheus and Grafana
 
-CVP is running on top of CentOS and prometheus node-exporter is used to collect various metrics both from the VM (memory and CPU usage, disk latency, writes/reads per second, etc) and the application’s components. These metrics can be viewed by accessing the Prometheus UI or creating dashboards in Grafana.
+CVP is runs on CentOS and prometheus node-exporter is used to collect various metrics both from the VM (memory and CPU usage, disk latency, writes/reads per second, etc) and the application’s components. These metrics can be viewed by accessing the Prometheus UI or creating dashboards in Grafana.
 
 # Exposing Prometheus on CloudVision
 
@@ -157,9 +157,13 @@ memory utilization: [process_resident_memory_bytes](http://localhost:9090/graph?
 Cpu utilization: http://localhost:9090/graph?g0.range_input=1d&g0.expr=irate(process_cpu_seconds_total%5B5m%5D)&g0.tab=0
 
 Kafka lag for dispatcher: [max(kafka_log_log_value{topic="postDB_v2", name="LogEndOffset"}) by (partition, topic) - max(offset_consumed{topic="postDB_v2"}) by (topic, partition)](http://localhost:9090/graph?g0.range_input=1h&g0.expr=max(kafka_log_log_value%7Btopic%3D%22postDB_v2%22%2C%20name%3D%22LogEndOffset%22%7D)%20by%20(partition%2C%20topic)%20-%20max(offset_consumed%7Btopic%3D%22postDB_v2%22%7D)%20by%20(topic%2C%20partition)&g0.tab=0)
-The Kafka LAG, shows us how many messages are in the queue per Kafka partitions should be less than 1000. Having high number of messages in the queue would mean that the cluster is under heavy load, either because of resource constraints or more devices are streaming than are supported and the scale limit is being hit
+The Kafka LAG, shows us how many messages are in the queue per Kafka partitions. Having high number of messages in the queue can lead to performance issues, either because of resource constraints or more devices are streaming than are supported and the scale limit is being hit.
 
 ## Flow Data collection
 number of flows per second for the last 5 minutes: [sum(rate(clover_ingest_num_notifications_received{type=~"ipfix|int|greent"}[5m]))](http://localhost:9090/graph?g0.range_input=1w&g0.expr=sum(rate(clover_ingest_num_notifications_received%7Btype%3D~%22ipfix%7Cint%7Cgreent%22%7D%5B5m%5D))&g0.tab=0)
 
 Many more are included in the json files in `./grafana/provisioning/dashboards/`.
+
+# Ask a question
+
+Easiest way to get support is to open an [issue](https://github.com/arista-netdevops-community/cvp-monitoring/issues).
