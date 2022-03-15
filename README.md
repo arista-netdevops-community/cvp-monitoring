@@ -125,7 +125,9 @@ e.g.: `cvpi_debug_all_20220307224437/prometheus/prometheus_data.tar.gz`
 
 3\. Untar the prometheus folder into the same folder you saved this project
 `tar -zxvf prometheus_data.tar.gz`
+
 4\. `Run docker-compose up -d`
+
 5\. Access grafana at `localhost:3000` or prometheus at `localhost:9090`
 
 # Useful metrics
