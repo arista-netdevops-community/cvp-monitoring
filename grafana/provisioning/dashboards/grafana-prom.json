@@ -2,7 +2,7 @@
     "annotations": {
         "list": [{
             "builtIn": 1,
-            "datasource": "-- Grafana --",
+            "datasource": "${DATASOURCE}",
             "enable": true,
             "hide": true,
             "iconColor": "rgba(0, 211, 255, 1)",
@@ -717,7 +717,7 @@
             }],
             "thresholds": [],
             "timeRegions": [],
-            "title": "Sflow updates",
+            "title": "Flows per second",
             "tooltip": {
                 "shared": true,
                 "sort": 0,
