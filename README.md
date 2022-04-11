@@ -67,7 +67,7 @@ That should build a local Prometheus and Grafana container preloaded with the da
 > Note that the local Prometheus container would be only needed if offline the CVP data would want to be checked out and not necessary 
 > for real-time monitoring.
 
-The next steps would be to add your Prometheus data-source described in [Adding Prometheus to your Grafana instance](#adding-prometheus-to-your-grafana-instance). The same steps would be used for existing Grafana containers as well.
+The next steps would be to add your Prometheus data-source described in steps 1-3 in [Adding Prometheus to your Grafana instance](#adding-prometheus-to-your-grafana-instance). The rest of the steps (4-10) would be only required for existing Grafana instances where the dashboards are not loaded.
 
 # Adding Prometheus to your Grafana instance
 
