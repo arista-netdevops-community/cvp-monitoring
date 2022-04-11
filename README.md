@@ -54,12 +54,18 @@ If the response is “Connection refused” it would mean that there’s a Firew
 
 # Building Grafana container
 
-If you don't already have a container, after cloning this repo simply run `docker-compose up -d`. That should build a local Prometheus and Grafana container preloaded with the dashboards and various metrics. 
+If you don't already have a container, after cloning this repo, docker-compose can be used to bring up the containers:
+
+1\. `git clone https://github.com/arista-netdevops-community/cvp-monitoring.git`
+2\. `cd cvp-monitoring` 
+3\. Run `docker-compose up -d`. 
+
+That should build a local Prometheus and Grafana container preloaded with the dashboards and various metrics. 
 
 > Note that the local Prometheus container would be only needed if offline the CVP data would want to be checked out and not necessary 
 > for real-time monitoring.
 
-If you already have a Grafana instance then check [Adding Prometheus to your Grafana instance](#adding-prometheus-to-your-grafana-instance)
+The next steps would be to add your Prometheus data-source described in [Adding Prometheus to your Grafana instance](#adding-prometheus-to-your-grafana-instance). The same steps would be used for existing Grafana containers as well.
 
 # Adding Prometheus to your Grafana instance
 
@@ -135,7 +141,7 @@ e.g.: `cvpi_debug_all_20220307224437/prometheus/prometheus_data.tar.gz`
 3\. Untar the prometheus folder into the same folder you saved this project
 `tar -zxvf prometheus_data.tar.gz`
 
-4\. `Run docker-compose up -d`
+4\. Run: `docker-compose up -d`
 
 5\. Access grafana at `localhost:3000` or prometheus at `localhost:9090`
 
