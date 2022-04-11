@@ -52,6 +52,15 @@ Connection to 192.0.2.100 port 9090 [tcp/websm] succeeded!
 
 If the response is “Connection refused” it would mean that there’s a Firewall in the middle that’s blocking the connection.
 
+# Building Grafana container
+
+If you don't already have a container, after cloning this repo simply run `docker-compose up -d`. That should build a local Prometheus and Grafana container preloaded with the dashboards and various metrics. 
+
+> Note that the local Prometheus container would be only needed if offline the CVP data would want to be checked out and not necessary 
+> for real-time monitoring.
+
+If you already have a Grafana instance then check [Adding Prometheus to your Grafana instance](#adding-prometheus-to-your-grafana-instance)
+
 # Adding Prometheus to your Grafana instance
 
 1\. Access your Grafana UI and add a new data source by clicking on the Gear icon on the left pane and select `Data Sources`
