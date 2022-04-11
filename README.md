@@ -57,7 +57,9 @@ If the response is “Connection refused” it would mean that there’s a Firew
 If you don't already have a container, after cloning this repo, docker-compose can be used to bring up the containers:
 
 1\. `git clone https://github.com/arista-netdevops-community/cvp-monitoring.git`
+
 2\. `cd cvp-monitoring` 
+
 3\. Run `docker-compose up -d`. 
 
 That should build a local Prometheus and Grafana container preloaded with the dashboards and various metrics. 
