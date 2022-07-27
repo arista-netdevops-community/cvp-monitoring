@@ -109,7 +109,7 @@ Simply renaming the UID to an arbitrary name is enough.
 
 ![img7](./static/img7.png)
 
-9\. Select JSON model from the left pane (there’s a delay of 5-10 seconds until the JSON model will show up) and replace all instances of `"datasource": "Prometheus"` with the correct datasource name, e.g. in below case it’s `"datasource": "mycvp"`, as mycvp was the name of the datasource chosen in step 4.
+9\. Select JSON model from the left pane (there’s a delay of 5-10 seconds until the JSON model will show up) and replace all instances of `"datasource": "Prometheus"` with the correct datasource name, e.g. in below case it’s `"datasource": "mycvp"`, as mycvp was the name of the datasource chosen in step 2.
 
 ![img10](./static/img10.png)
 
