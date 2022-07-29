@@ -15,11 +15,12 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 1,
+  "id": 2,
+  "iteration": 1659110976016,
   "links": [],
   "panels": [
     {
-      "collapsed": true,
+      "collapsed": false,
       "datasource": null,
       "gridPos": {
         "h": 1,
@@ -28,105 +29,106 @@
         "y": 0
       },
       "id": 32,
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "dashLength": 10,
-          "dashes": false,
-          "datasource": "Prometheus",
-          "fieldConfig": {
-            "defaults": {
-              "links": []
-            },
-            "overrides": []
-          },
-          "fill": 1,
-          "fillGradient": 0,
-          "gridPos": {
-            "h": 8,
-            "w": 12,
-            "x": 0,
-            "y": 2
-          },
-          "hiddenSeries": false,
-          "id": 18,
-          "legend": {
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "show": true,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 1,
-          "nullPointMode": "null",
-          "options": {
-            "alertThreshold": true
-          },
-          "percentage": false,
-          "pluginVersion": "7.5.4",
-          "pointradius": 2,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "spaceLength": 10,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "expr": "node_memory_MemAvailable_bytes",
-              "interval": "",
-              "legendFormat": "",
-              "refId": "A"
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeRegions": [],
-          "timeShift": null,
-          "title": "Available memory",
-          "tooltip": {
-            "shared": true,
-            "sort": 0,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "buckets": null,
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            }
-          ],
-          "yaxis": {
-            "align": false,
-            "alignLevel": null
-          }
-        }
-      ],
+      "panels": [],
       "title": "Memory",
       "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DATASOURCE}",
+      "fieldConfig": {
+        "defaults": {
+          "links": []
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "hiddenSeries": false,
+      "id": 18,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "node_memory_MemAvailable_bytes",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Available memory",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:106",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:107",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
     },
     {
       "collapsed": false,
@@ -135,7 +137,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 1
+        "y": 9
       },
       "id": 30,
       "panels": [],
@@ -147,7 +149,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": "${DATASOURCE}",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -160,7 +162,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 2
+        "y": 10
       },
       "hiddenSeries": false,
       "id": 2,
@@ -216,6 +218,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:262",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -224,6 +227,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:263",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -242,7 +246,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": "${DATASOURCE}",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -255,7 +259,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 2
+        "y": 10
       },
       "hiddenSeries": false,
       "id": 6,
@@ -350,7 +354,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": "${DATASOURCE}",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -363,7 +367,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 11
+        "y": 19
       },
       "hiddenSeries": false,
       "id": 4,
@@ -419,6 +423,7 @@
       },
       "yaxes": [
         {
+          "$$hashKey": "object:423",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -427,6 +432,7 @@
           "show": true
         },
         {
+          "$$hashKey": "object:424",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -447,7 +453,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 19
+        "y": 27
       },
       "id": 28,
       "panels": [],
@@ -459,7 +465,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": "${DATASOURCE}",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -472,7 +478,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 20
+        "y": 28
       },
       "hiddenSeries": false,
       "id": 16,
@@ -565,7 +571,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": "${DATASOURCE}",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -578,7 +584,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 20
+        "y": 28
       },
       "hiddenSeries": false,
       "id": 10,
@@ -663,7 +669,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": "${DATASOURCE}",
       "description": "I/O wait means you can't keep up with the data coming into the cluster - the customer needs to improve their disks or scale the cluster down",
       "fieldConfig": {
         "defaults": {
@@ -677,7 +683,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 28
+        "y": 36
       },
       "hiddenSeries": false,
       "id": 8,
@@ -780,7 +786,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": "${DATASOURCE}",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -793,7 +799,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 28
+        "y": 36
       },
       "hiddenSeries": false,
       "id": 12,
@@ -877,7 +883,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${DATASOURCE}",
       "description": "This panel will only have data if the customer is sending Sflow data to their CVP cluster. CVP is limited to 5000 updates per second. Anything over this limit is unsupported.",
       "fieldConfig": {
         "defaults": {},
@@ -889,7 +895,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 36
+        "y": 44
       },
       "hiddenSeries": false,
       "id": 22,
@@ -986,7 +992,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 44
+        "y": 52
       },
       "id": 34,
       "panels": [],
@@ -998,7 +1004,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${DATASOURCE}",
       "fieldConfig": {
         "defaults": {},
         "overrides": []
@@ -1009,7 +1015,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 45
+        "y": 53
       },
       "hiddenSeries": false,
       "id": 26,
@@ -1105,7 +1111,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${DATASOURCE}",
       "fieldConfig": {
         "defaults": {},
         "overrides": []
@@ -1116,7 +1122,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 45
+        "y": 53
       },
       "hiddenSeries": false,
       "id": 24,
@@ -1201,7 +1207,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": "${DATASOURCE}",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -1214,7 +1220,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 53
+        "y": 61
       },
       "hiddenSeries": false,
       "id": 14,
@@ -1298,7 +1304,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "Prometheus",
+      "datasource": "${DATASOURCE}",
       "description": "The yellow and red warning ranges in this graph are OPINIONS - if your cluster Kafka lag is this high you should take note, but it may be expected in large scaled clusters",
       "fieldConfig": {
         "defaults": {
@@ -1312,7 +1318,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 53
+        "y": 61
       },
       "hiddenSeries": false,
       "id": 20,
@@ -1418,11 +1424,32 @@
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "current": {
+          "selected": false,
+          "text": "Prometheus",
+          "value": "Prometheus"
+        },
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": "Datasource",
+        "multi": false,
+        "name": "DATASOURCE",
+        "options": [],
+        "query": "prometheus",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "type": "datasource"
+      }
+    ]
   },
   "time": {
-    "from": "2022-04-18T09:49:50.588Z",
-    "to": "2022-05-03T10:30:17.223Z"
+    "from": "now-14d",
+    "to": "now"
   },
   "timepicker": {
     "refresh_intervals": [
@@ -1440,5 +1467,5 @@
   "timezone": "",
   "title": "case data",
   "uid": "YpXi8YWGz",
-  "version": 5
+  "version": 2
 }
