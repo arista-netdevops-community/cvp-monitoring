@@ -1,6 +1,6 @@
 # Monitoring CloudVision with Prometheus and Grafana
 
-CVP is runs on CentOS and prometheus node-exporter is used to collect various metrics both from the VM (memory and CPU usage, disk latency, writes/reads per second, etc) and the application’s components. These metrics can be viewed by accessing the Prometheus UI or creating dashboards in Grafana.
+CVP runs on CentOS and prometheus node-exporter is used to collect various metrics both from the VM (memory and CPU usage, disk latency, writes/reads per second, etc) and the application’s components. These metrics can be viewed by accessing the Prometheus UI or creating dashboards in Grafana.
 
 # Exposing Prometheus on CloudVision
 
