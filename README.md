@@ -145,7 +145,7 @@ e.g.: `cvpi_debug_all_20220307224437/prometheus/prometheus_data.tar.gz`
 
 4\. Run: `docker-compose up -d`
 
-5\. Access grafana at `localhost:3000` or prometheus at `localhost:9090`
+5\. Access grafana at `localhost:3000` using `admin/arista` (default credentials as per the docker compose file but can be changed to anything) or prometheus at `localhost:9090`
 
 # Useful metrics
 
