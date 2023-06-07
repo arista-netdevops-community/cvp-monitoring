@@ -1849,8 +1849,8 @@
     ]
   },
   "time": {
-    "from": "2023-04-30T18:33:10.152Z",
-    "to": "2023-05-15T18:48:43.170Z"
+    "from": "now-14d",
+    "to": "now"
   },
   "timepicker": {
     "refresh_intervals": [
