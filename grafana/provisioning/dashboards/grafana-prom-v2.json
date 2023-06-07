@@ -15,8 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 2,
-  "iteration": 1659110976016,
+  "id": 1,
+  "iteration": 1686172507803,
   "links": [],
   "panels": [
     {
@@ -27,6 +27,406 @@
         "w": 24,
         "x": 0,
         "y": 0
+      },
+      "id": 36,
+      "panels": [],
+      "title": "Network",
+      "type": "row"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DATASOURCE}",
+      "description": "5 minute traffic rates of TX packets for \"physical\" VM interfaces and the flannel overlay. Pod interfaces are not shown.",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "hiddenSeries": false,
+      "id": 38,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "rate(node_network_transmit_packets_total{device=~\"eth0|eth1|flannel.+\"}[5m])",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "TX packets by interface",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:104",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:105",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DATASOURCE}",
+      "description": "5 minute traffic rates of RX packets for \"physical\" VM interfaces and the flannel overlay. Pod interfaces are not shown.",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "hiddenSeries": false,
+      "id": 40,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "rate(node_network_receive_packets_total{device=~\"eth0|eth1|flannel.+\"}[5m])",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "RX packets by interface",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:188",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:189",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DATASOURCE}",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "hiddenSeries": false,
+      "id": 44,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "rate(node_network_transmit_bytes_total{device=~\"eth0|eth1|flannel.+\"}[5m])",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Interface TX bitrate",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:426",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:427",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "${DATASOURCE}",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 9
+      },
+      "hiddenSeries": false,
+      "id": 42,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "7.5.4",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "irate(node_network_receive_bytes_total{device=~\"eth0|eth1|flannel.+\"}[5m])",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Interface RX bitrate",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:266",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:267",
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 17
       },
       "id": 32,
       "panels": [],
@@ -51,7 +451,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 1
+        "y": 18
       },
       "hiddenSeries": false,
       "id": 18,
@@ -137,7 +537,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 9
+        "y": 26
       },
       "id": 30,
       "panels": [],
@@ -162,7 +562,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 10
+        "y": 27
       },
       "hiddenSeries": false,
       "id": 2,
@@ -259,7 +659,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 10
+        "y": 27
       },
       "hiddenSeries": false,
       "id": 6,
@@ -367,7 +767,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 19
+        "y": 36
       },
       "hiddenSeries": false,
       "id": 4,
@@ -453,7 +853,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 27
+        "y": 44
       },
       "id": 28,
       "panels": [],
@@ -478,7 +878,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 28
+        "y": 45
       },
       "hiddenSeries": false,
       "id": 16,
@@ -584,7 +984,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 28
+        "y": 45
       },
       "hiddenSeries": false,
       "id": 10,
@@ -683,7 +1083,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 36
+        "y": 53
       },
       "hiddenSeries": false,
       "id": 8,
@@ -799,7 +1199,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 36
+        "y": 53
       },
       "hiddenSeries": false,
       "id": 12,
@@ -895,7 +1295,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 44
+        "y": 61
       },
       "hiddenSeries": false,
       "id": 22,
@@ -992,7 +1392,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 52
+        "y": 69
       },
       "id": 34,
       "panels": [],
@@ -1015,7 +1415,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 53
+        "y": 70
       },
       "hiddenSeries": false,
       "id": 26,
@@ -1122,7 +1522,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 53
+        "y": 70
       },
       "hiddenSeries": false,
       "id": 24,
@@ -1220,7 +1620,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 61
+        "y": 78
       },
       "hiddenSeries": false,
       "id": 14,
@@ -1318,7 +1718,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 61
+        "y": 78
       },
       "hiddenSeries": false,
       "id": 20,
@@ -1427,7 +1827,7 @@
     "list": [
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "Prometheus",
           "value": "Prometheus"
         },
@@ -1440,6 +1840,7 @@
         "name": "DATASOURCE",
         "options": [],
         "query": "prometheus",
+        "queryValue": "",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -1448,8 +1849,8 @@
     ]
   },
   "time": {
-    "from": "now-14d",
-    "to": "now"
+    "from": "2023-04-30T18:33:10.152Z",
+    "to": "2023-05-15T18:48:43.170Z"
   },
   "timepicker": {
     "refresh_intervals": [
