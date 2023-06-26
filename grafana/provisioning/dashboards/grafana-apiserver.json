@@ -1,30 +1,38 @@
 {
     "annotations": {
-        "list": [{
-            "builtIn": 1,
-            "datasource": "-- Grafana --",
-            "enable": true,
-            "hide": true,
-            "iconColor": "rgba(0, 211, 255, 1)",
-            "name": "Annotations & Alerts",
-            "target": {
-                "limit": 100,
-                "matchAny": false,
-                "tags": [],
+        "list": [
+            {
+                "builtIn": 1,
+                "datasource": {
+                    "type": "datasource",
+                    "uid": "grafana"
+                },
+                "enable": true,
+                "hide": true,
+                "iconColor": "rgba(0, 211, 255, 1)",
+                "name": "Annotations & Alerts",
+                "target": {
+                    "limit": 100,
+                    "matchAny": false,
+                    "tags": [],
+                    "type": "dashboard"
+                },
                 "type": "dashboard"
-            },
-            "type": "dashboard"
-        }]
+            }
+        ]
     },
     "editable": true,
-    "gnetId": null,
+    "fiscalYearStartMonth": 0,
     "graphTooltip": 0,
-    "id": 2,
-    "iteration": 1634257215243,
     "links": [],
-    "panels": [{
+    "liveNow": false,
+    "panels": [
+        {
             "collapsed": false,
-            "datasource": null,
+            "datasource": {
+                "type": "datasource",
+                "uid": "grafana"
+            },
             "gridPos": {
                 "h": 1,
                 "w": 24,
@@ -33,17 +41,30 @@
             },
             "id": 44,
             "panels": [],
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "datasource",
+                        "uid": "grafana"
+                    },
+                    "refId": "A"
+                }
+            ],
             "title": "Hbase",
             "type": "row"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -74,7 +95,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -98,31 +120,42 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "hbase_master_server_averageload",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "hbase_master_server_averageload",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Hbase average load",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -153,7 +186,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -177,31 +211,42 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "hbase_master_server_averageload",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "hbase_master_server_averageload",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Hbase average load",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -232,7 +277,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -256,31 +302,42 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "irate(hbase_regionserver_server_totalrequestcount[5m])",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "irate(hbase_regionserver_server_totalrequestcount[5m])",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Hbase regionserver number of requests",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -311,7 +368,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -335,31 +393,42 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "rate(hbase_master_server_clusterrequests[5m])",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "rate(hbase_master_server_clusterrequests[5m])",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Hbase master server cluster requests",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -390,7 +459,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -414,25 +484,34 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "rate(hbase_regionserver_wal_rollrequest[5m])",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "rate(hbase_regionserver_wal_rollrequest[5m])",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "WAL Rolls per 5m",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -440,6 +519,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -470,7 +551,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -494,31 +576,42 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "sum(irate(hbase_scancount[5m])) by (instance)",
-                "interval": "",
-                "legendFormat": "{{instance}}",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "sum(irate(hbase_scancount[5m])) by (instance)",
+                    "interval": "",
+                    "legendFormat": "{{instance}}",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Scan count per 5m",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "left",
                         "barAlignment": 0,
@@ -549,7 +642,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -574,25 +668,34 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "sum without(gc)(rate(jvm_gc_collection_seconds_sum{job=\"core\"}[5m]))",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "sum without(gc)(rate(jvm_gc_collection_seconds_sum{job=\"core\"}[5m]))",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Regionserver time spent in GC",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -600,6 +703,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -630,7 +735,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -654,31 +760,42 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "sum(irate(hbase_getcount[5m])) by (instance)",
-                "interval": "",
-                "legendFormat": "{{instance}}",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "sum(irate(hbase_getcount[5m])) by (instance)",
+                    "interval": "",
+                    "legendFormat": "{{instance}}",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Get count per 5m",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "left",
                         "barAlignment": 0,
@@ -709,7 +826,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -734,25 +852,34 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "irate(hbase_regionserver_ipc_exceptions_callqueuetoobig[2m])",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "irate(hbase_regionserver_ipc_exceptions_callqueuetoobig[2m])",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "region server callqueuetoobig rate",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -760,6 +887,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -790,7 +919,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -814,25 +944,34 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "sum(irate(hbase_putcount[5m])) by (instance)",
-                "interval": "",
-                "legendFormat": "{{instance}}",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "sum(irate(hbase_putcount[5m])) by (instance)",
+                    "interval": "",
+                    "legendFormat": "{{instance}}",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Put count per 5m",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -840,6 +979,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "left",
                         "barAlignment": 0,
@@ -870,7 +1011,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -895,31 +1037,42 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "hbase_regionserver_ipc_numopenconnections",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "hbase_regionserver_ipc_numopenconnections",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Region server num open connections",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -950,7 +1103,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -974,25 +1128,34 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "irate(hbase_compactionscompletedcount[5m])",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "irate(hbase_compactionscompletedcount[5m])",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Hbase compaction completed",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -1000,6 +1163,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "left",
                         "barAlignment": 0,
@@ -1030,7 +1195,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -1055,13 +1221,19 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
                     "exemplar": true,
                     "expr": "irate(node_netstat_TcpExt_ListenOverflows[5m])",
                     "hide": false,
@@ -1071,6 +1243,9 @@
                     "refId": "A"
                 },
                 {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
                     "exemplar": true,
                     "expr": "irate(node_netstat_TcpExt_ListenDrops[5m])",
                     "hide": false,
@@ -1083,13 +1258,17 @@
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -1120,7 +1299,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -1144,25 +1324,34 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "irate(process_cpu_seconds_total{job=\"core\"}[5m])",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "irate(process_cpu_seconds_total{job=\"core\"}[5m])",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Core CPU Use",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -1170,6 +1359,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "left",
                         "barAlignment": 0,
@@ -1200,7 +1391,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -1225,32 +1417,43 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "irate(node_netstat_Tcp_ActiveOpens[5m])",
-                "hide": false,
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "irate(node_netstat_Tcp_ActiveOpens[5m])",
+                    "hide": false,
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Node Netstat TCP Active Opens",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "left",
                         "barAlignment": 0,
@@ -1281,7 +1484,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -1306,25 +1510,34 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "hbase_regionserver_server_blockcachesize",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "hbase_regionserver_server_blockcachesize",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Blockcache Size",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -1344,7 +1557,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -1370,23 +1584,31 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "sum(rate(storage_latency_histogram_bucket{app=\"ingest\"}[5m]))",
-                "hide": false,
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "sum(rate(storage_latency_histogram_bucket{app=\"ingest\"}[5m]))",
+                    "hide": false,
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Storage Latency Histogram",
             "type": "histogram"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -1394,6 +1616,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "left",
                         "barAlignment": 0,
@@ -1424,7 +1648,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -1449,25 +1674,34 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "100 - (100*(avg by (instance) (irate(node_cpu_seconds_total{mode=\"idle\"}[5m]))))",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "100 - (100*(avg by (instance) (irate(node_cpu_seconds_total{mode=\"idle\"}[5m]))))",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "CPU Usage Overall",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -1475,6 +1709,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -1505,7 +1741,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -1530,26 +1767,35 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "hbase_regionserver_server_blockcachehitcount/(hbase_regionserver_server_blockcachemisscount+hbase_regionserver_server_blockcachehitcount)",
-                "hide": false,
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "hbase_regionserver_server_blockcachehitcount/(hbase_regionserver_server_blockcachemisscount+hbase_regionserver_server_blockcachehitcount)",
+                    "hide": false,
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Blockcache Hit Rate",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -1557,6 +1803,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "left",
                         "barAlignment": 0,
@@ -1587,7 +1835,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -1612,25 +1861,34 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "irate(node_network_receive_bytes_total[2m])",
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "irate(node_network_receive_bytes_total[2m])",
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Node Network Receive Bytes Total 2m",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -1638,6 +1896,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -1668,7 +1928,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -1693,26 +1954,35 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "sum(hbase_memstoresize) by (instance)",
-                "hide": false,
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "sum(hbase_memstoresize) by (instance)",
+                    "hide": false,
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Memstore Size",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -1720,6 +1990,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "left",
                         "barAlignment": 0,
@@ -1750,7 +2022,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -1775,26 +2048,35 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "irate(node_netstat_Tcp_InErrs[5m])",
-                "hide": false,
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "irate(node_netstat_Tcp_InErrs[5m])",
+                    "hide": false,
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Node Netstat TCP InErrs",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -1802,6 +2084,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "left",
                         "barAlignment": 0,
@@ -1832,7 +2116,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -1857,26 +2142,35 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "max(sum(rate(hbase_getcount[5m])))",
-                "hide": false,
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "max(sum(rate(hbase_getcount[5m])))",
+                    "hide": false,
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Get Count Per 5m",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "",
             "fieldConfig": {
                 "defaults": {
@@ -1884,6 +2178,8 @@
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -1914,7 +2210,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -1939,27 +2236,37 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "sort_desc(sum by (grpc_method, app) (irate(grpc_client_handled_total{grpc_service=\"RouterV1\", grpc_method=\"Get\"}[2m])) != 0)",
-                "hide": false,
-                "interval": "",
-                "legendFormat": "",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "sort_desc(sum by (grpc_method, app) (irate(grpc_client_handled_total{grpc_service=\"RouterV1\", grpc_method=\"Get\"}[2m])) != 0)",
+                    "hide": false,
+                    "interval": "",
+                    "legendFormat": "",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Gets/s by app",
             "type": "timeseries"
         },
         {
             "collapsed": false,
-            "datasource": null,
+            "datasource": {
+                "type": "datasource",
+                "uid": "grafana"
+            },
             "gridPos": {
                 "h": 1,
                 "w": 24,
@@ -1968,12 +2275,22 @@
             },
             "id": 21,
             "panels": [],
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "datasource",
+                        "uid": "grafana"
+                    },
+                    "refId": "A"
+                }
+            ],
             "title": "GRPC Connections",
             "type": "row"
         },
         {
-            "cacheTimeout": null,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "uid": "$DATASOURCE"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
@@ -1983,7 +2300,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -2004,7 +2322,6 @@
                 "y": 106
             },
             "id": 19,
-            "interval": null,
             "links": [],
             "maxDataPoints": 100,
             "options": {
@@ -2022,15 +2339,18 @@
                 "text": {},
                 "textMode": "auto"
             },
-            "pluginVersion": "8.1.2",
-            "targets": [{
-                "expr": "sum(aeris_apiserver_grpc_num_client_connections{app=\"apiserver\", state=\"READY\"})-sum(aeris_apiserver_grpc_num_client_connections{app=\"apiserver\", state=\"SHUTDOWN\"})",
-                "instant": false,
-                "legendFormat": "# GRPC connections",
-                "refId": "A"
-            }],
-            "timeFrom": null,
-            "timeShift": null,
+            "pluginVersion": "10.0.1",
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "expr": "sum(aeris_apiserver_grpc_num_client_connections{app=\"apiserver\", state=\"READY\"})-sum(aeris_apiserver_grpc_num_client_connections{app=\"apiserver\", state=\"SHUTDOWN\"})",
+                    "instant": false,
+                    "legendFormat": "# GRPC connections",
+                    "refId": "A"
+                }
+            ],
             "title": "# GRPC Connections",
             "type": "stat"
         },
@@ -2039,7 +2359,9 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "uid": "$DATASOURCE"
+            },
             "fieldConfig": {
                 "defaults": {
                     "links": []
@@ -2072,7 +2394,7 @@
                 "alertThreshold": true
             },
             "percentage": false,
-            "pluginVersion": "8.1.2",
+            "pluginVersion": "10.0.1",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -2080,15 +2402,18 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
-                "expr": "aeris_apiserver_grpc_num_client_connections{app=\"apiserver\", state=\"READY\"} - on (kubernetes_pod_name) aeris_apiserver_grpc_num_client_connections{app=\"apiserver\", state=\"SHUTDOWN\"}",
-                "legendFormat": "{{kubernetes_pod_name}}",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "expr": "aeris_apiserver_grpc_num_client_connections{app=\"apiserver\", state=\"READY\"} - on (kubernetes_pod_name) aeris_apiserver_grpc_num_client_connections{app=\"apiserver\", state=\"SHUTDOWN\"}",
+                    "legendFormat": "{{kubernetes_pod_name}}",
+                    "refId": "A"
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "# Active GRPC Connections",
             "tooltip": {
                 "shared": true,
@@ -2097,32 +2422,24 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
@@ -2130,7 +2447,9 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "uid": "$DATASOURCE"
+            },
             "fieldConfig": {
                 "defaults": {
                     "links": []
@@ -2163,7 +2482,7 @@
                 "alertThreshold": true
             },
             "percentage": false,
-            "pluginVersion": "8.1.2",
+            "pluginVersion": "10.0.1",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -2171,15 +2490,18 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
-                "expr": "increase(aeris_apiserver_grpc_num_client_connections{app=\"apiserver\", state=\"READY\"}[5m])",
-                "legendFormat": "{{kubernetes_pod_name}}",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "expr": "increase(aeris_apiserver_grpc_num_client_connections{app=\"apiserver\", state=\"READY\"}[5m])",
+                    "legendFormat": "{{kubernetes_pod_name}}",
+                    "refId": "A"
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "# New GRPC Connection (5m)",
             "tooltip": {
                 "shared": true,
@@ -2188,37 +2510,32 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "collapsed": false,
-            "datasource": null,
+            "datasource": {
+                "type": "datasource",
+                "uid": "grafana"
+            },
             "gridPos": {
                 "h": 1,
                 "w": 24,
@@ -2227,6 +2544,15 @@
             },
             "id": 12,
             "panels": [],
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "datasource",
+                        "uid": "grafana"
+                    },
+                    "refId": "A"
+                }
+            ],
             "title": "Subscriptions",
             "type": "row"
         },
@@ -2235,7 +2561,10 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "$DATASOURCE"
+            },
             "fieldConfig": {
                 "defaults": {
                     "links": []
@@ -2269,7 +2598,7 @@
                 "alertThreshold": true
             },
             "percentage": false,
-            "pluginVersion": "8.1.2",
+            "pluginVersion": "10.0.1",
             "pointradius": 5,
             "points": false,
             "renderer": "flot",
@@ -2277,21 +2606,26 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
-                "exemplar": true,
-                "expr": "irate(notifications_sent_total[5m])",
-                "format": "time_series",
-                "interval": "",
-                "intervalFactor": 2,
-                "legendFormat": "{{ kubernetes_pod_name }}",
-                "metric": "notifications_sent_total",
-                "refId": "A",
-                "step": 4
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "irate({__name__=~\".*notifications_sent_total\"}[5m])",
+                    "format": "time_series",
+                    "interval": "",
+                    "intervalFactor": 2,
+                    "legendFormat": "{{ kubernetes_pod_name }}",
+                    "metric": "notifications_sent_total",
+                    "range": true,
+                    "refId": "A",
+                    "step": 4
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Notifications Sent",
             "tooltip": {
                 "shared": true,
@@ -2300,34 +2634,26 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "$$hashKey": "object:932",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "$$hashKey": "object:933",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": false
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
@@ -2335,7 +2661,10 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "$DATASOURCE"
+            },
             "fieldConfig": {
                 "defaults": {
                     "links": []
@@ -2369,7 +2698,7 @@
                 "alertThreshold": true
             },
             "percentage": false,
-            "pluginVersion": "8.1.2",
+            "pluginVersion": "10.0.1",
             "pointradius": 5,
             "points": false,
             "renderer": "flot",
@@ -2377,21 +2706,26 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
-                "exemplar": true,
-                "expr": "irate(notifications_batches_sent_total[5m])",
-                "format": "time_series",
-                "interval": "",
-                "intervalFactor": 2,
-                "legendFormat": "{{ kubernetes_pod_name }}",
-                "metric": "",
-                "refId": "A",
-                "step": 4
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "irate({__name__=~\".*notification(s*)_batches_sent_total\"}[5m])",
+                    "format": "time_series",
+                    "interval": "",
+                    "intervalFactor": 2,
+                    "legendFormat": "{{ kubernetes_pod_name }}",
+                    "metric": "",
+                    "range": true,
+                    "refId": "A",
+                    "step": 4
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Batches Sent",
             "tooltip": {
                 "shared": true,
@@ -2400,34 +2734,26 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "$$hashKey": "object:981",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "$$hashKey": "object:982",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": false
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
@@ -2435,7 +2761,10 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "$DATASOURCE"
+            },
             "fieldConfig": {
                 "defaults": {
                     "links": []
@@ -2469,7 +2798,7 @@
                 "alertThreshold": true
             },
             "percentage": false,
-            "pluginVersion": "8.1.2",
+            "pluginVersion": "10.0.1",
             "pointradius": 5,
             "points": false,
             "renderer": "flot",
@@ -2477,21 +2806,26 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
-                "exemplar": true,
-                "expr": "subscriptions_added_total - subscriptions_removed_total",
-                "format": "time_series",
-                "interval": "",
-                "intervalFactor": 2,
-                "legendFormat": "{{ kubernetes_pod_name }}",
-                "metric": "subscriptions_added_total",
-                "refId": "A",
-                "step": 4
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "{__name__=~\".*subscriptions_added_total\"} - {__name__=~\".*subscriptions_removed_total\"}",
+                    "format": "time_series",
+                    "interval": "",
+                    "intervalFactor": 2,
+                    "legendFormat": "{{ kubernetes_pod_name }}",
+                    "metric": "subscriptions_added_total",
+                    "range": true,
+                    "refId": "A",
+                    "step": 4
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Live Subscriptions",
             "tooltip": {
                 "shared": true,
@@ -2500,34 +2834,26 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "$$hashKey": "object:1030",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "$$hashKey": "object:1031",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
@@ -2535,7 +2861,10 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "$DATASOURCE"
+            },
             "fieldConfig": {
                 "defaults": {
                     "links": []
@@ -2570,7 +2899,7 @@
                 "alertThreshold": true
             },
             "percentage": false,
-            "pluginVersion": "8.1.2",
+            "pluginVersion": "10.0.1",
             "pointradius": 5,
             "points": false,
             "renderer": "flot",
@@ -2578,21 +2907,26 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": true,
-            "targets": [{
-                "exemplar": true,
-                "expr": "irate(notifications_looked_up_total[5m])",
-                "format": "time_series",
-                "interval": "",
-                "intervalFactor": 2,
-                "legendFormat": "{{ kubernetes_pod_name }}",
-                "metric": "",
-                "refId": "A",
-                "step": 2
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "irate({__name__=~\".*notifications_looked_up_total\"}[5m])",
+                    "format": "time_series",
+                    "interval": "",
+                    "intervalFactor": 2,
+                    "legendFormat": "{{ kubernetes_pod_name }}",
+                    "metric": "",
+                    "range": true,
+                    "refId": "A",
+                    "step": 2
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Notifications Looked Up",
             "tooltip": {
                 "shared": true,
@@ -2601,34 +2935,26 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "$$hashKey": "object:883",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "$$hashKey": "object:884",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": false
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
@@ -2636,7 +2962,10 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "$DATASOURCE"
+            },
             "description": "This is the percentage of notifications that hit the cach versus the total number of notifications sent.",
             "fieldConfig": {
                 "defaults": {
@@ -2672,7 +3001,7 @@
                 "alertThreshold": true
             },
             "percentage": false,
-            "pluginVersion": "8.1.2",
+            "pluginVersion": "10.0.1",
             "pointradius": 5,
             "points": false,
             "renderer": "flot",
@@ -2680,21 +3009,26 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": true,
-            "targets": [{
-                "exemplar": true,
-                "expr": "irate(notifications_auth_cached{app_kubernetes_io_name=\"apiserver\",app_kubernetes_io_part_of=\"aeris\"}[5m])/irate(notifications_sent_total{app_kubernetes_io_name=\"apiserver\",app_kubernetes_io_part_of=\"aeris\"}[5m])",
-                "format": "time_series",
-                "interval": "",
-                "intervalFactor": 2,
-                "legendFormat": "{{ kubernetes_pod_name }}",
-                "metric": "",
-                "refId": "A",
-                "step": 2
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "irate({__name__=~\".*notifications_auth_cached.*\",app=\"apiserver\"}[5m])/irate({__name__=~\".*notifications_sent_total\",app=\"apiserver\"}[5m])",
+                    "format": "time_series",
+                    "interval": "",
+                    "intervalFactor": 2,
+                    "legendFormat": "{{ kubernetes_pod_name }}",
+                    "metric": "",
+                    "range": true,
+                    "refId": "A",
+                    "step": 2
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "% Notifications Hitting Auth Cache",
             "tooltip": {
                 "shared": true,
@@ -2703,32 +3037,24 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": false
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
@@ -2736,7 +3062,10 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "$DATASOURCE"
+            },
             "description": "This is the total number of subscription notifications that we dropped because there it did not have permissions on the associated dataset.",
             "fieldConfig": {
                 "defaults": {
@@ -2772,7 +3101,7 @@
                 "alertThreshold": true
             },
             "percentage": false,
-            "pluginVersion": "8.1.2",
+            "pluginVersion": "10.0.1",
             "pointradius": 5,
             "points": false,
             "renderer": "flot",
@@ -2780,21 +3109,26 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": true,
-            "targets": [{
-                "exemplar": true,
-                "expr": "irate(notifications_skipped_total{app_kubernetes_io_name=\"apiserver\",app_kubernetes_io_part_of=\"aeris\"}[5m])",
-                "format": "time_series",
-                "interval": "",
-                "intervalFactor": 2,
-                "legendFormat": "{{ kubernetes_pod_name }}",
-                "metric": "",
-                "refId": "A",
-                "step": 2
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "irate({__name__=~\".*notifications_skipped_total\", app=\"apiserver\"}[5m])",
+                    "format": "time_series",
+                    "interval": "",
+                    "intervalFactor": 2,
+                    "legendFormat": "{{ kubernetes_pod_name }}",
+                    "metric": "",
+                    "range": true,
+                    "refId": "A",
+                    "step": 2
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Subscription Notifications Skipped",
             "tooltip": {
                 "shared": true,
@@ -2803,32 +3137,24 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": false
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
@@ -2836,7 +3162,10 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "type": "prometheus",
+                "uid": "$DATASOURCE"
+            },
             "fieldConfig": {
                 "defaults": {
                     "links": []
@@ -2872,7 +3201,7 @@
                 "alertThreshold": true
             },
             "percentage": false,
-            "pluginVersion": "8.1.2",
+            "pluginVersion": "10.0.1",
             "pointradius": 5,
             "points": false,
             "renderer": "flot",
@@ -2880,19 +3209,24 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
-                "exemplar": true,
-                "expr": "max(kafka_log_logendoffset) by (partition, topic) - on (partition, topic) max(offset_consumed{app_kubernetes_io_name=\"apiserver\",app_kubernetes_io_part_of=\"aeris\"}) by (partition, topic)",
-                "format": "time_series",
-                "interval": "",
-                "intervalFactor": 1,
-                "legendFormat": "{{topic}} {{partition}}",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "editorMode": "code",
+                    "exemplar": true,
+                    "expr": "max(kafka_log_logendoffset) by (partition, topic) - on (partition, topic) max(offset_consumed{app=\"apiserver\"}) by (partition, topic)",
+                    "format": "time_series",
+                    "interval": "",
+                    "intervalFactor": 1,
+                    "legendFormat": "{{topic}} {{partition}}",
+                    "range": true,
+                    "refId": "A"
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Kafka queues lag",
             "tooltip": {
                 "shared": true,
@@ -2901,34 +3235,26 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "$$hashKey": "object:1083",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "$$hashKey": "object:1084",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
@@ -2936,7 +3262,9 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "description": "Latency from request to the first batch response of get requests across all apiservers",
             "fill": 1,
             "fillGradient": 0,
@@ -2964,7 +3292,7 @@
                 "alertThreshold": true
             },
             "percentage": false,
-            "pluginVersion": "8.1.2",
+            "pluginVersion": "10.0.1",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -2972,7 +3300,11 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
                     "exemplar": true,
                     "expr": "histogram_quantile(0.95, sum(rate(aeris_apiserver_get_first_response_latency_seconds_bucket[5m])) by (le)) * 1e3",
                     "interval": "",
@@ -2981,16 +3313,22 @@
                     "refId": "A"
                 },
                 {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
                     "exemplar": true,
-                    "expr": "histogram_quantile(0.5, sum(rate(aeris_apiserver_get_first_response_latency_seconds_bucket[5m])) by (le))  * 1e3",
+                    "expr": "histogram_quantile(0.5, sum(rate(aeris_apiserver_get_first_response_latency_seconds_bucket[5m])) by (le))    * 1e3",
                     "hide": false,
                     "interval": "",
                     "legendFormat": "50th",
                     "refId": "B"
                 },
                 {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
                     "exemplar": true,
-                    "expr": "histogram_quantile(0.99, sum(rate(aeris_apiserver_get_first_response_latency_seconds_bucket[5m])) by (le))  * 1e3",
+                    "expr": "histogram_quantile(0.99, sum(rate(aeris_apiserver_get_first_response_latency_seconds_bucket[5m])) by (le))    * 1e3",
                     "hide": false,
                     "interval": "",
                     "legendFormat": "99th",
@@ -2998,9 +3336,7 @@
                 }
             ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Get request to first response latency",
             "tooltip": {
                 "shared": true,
@@ -3009,44 +3345,40 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "$$hashKey": "object:127",
                     "format": "ms",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "$$hashKey": "object:128",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -3077,7 +3409,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -3101,31 +3434,42 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "rate(aeris_apiserver_gets_received_total[5m])",
-                "interval": "",
-                "legendFormat": "{{kubernetes_pod_name}} {{type}}",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "rate(aeris_apiserver_gets_received_total[5m])",
+                    "interval": "",
+                    "legendFormat": "{{kubernetes_pod_name}} {{type}}",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Rate of gets received",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
                         "mode": "palette-classic"
                     },
                     "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
                         "axisLabel": "",
                         "axisPlacement": "auto",
                         "barAlignment": 0,
@@ -3157,7 +3501,8 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
+                        "steps": [
+                            {
                                 "color": "green",
                                 "value": null
                             },
@@ -3182,13 +3527,19 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
-                    "mode": "single"
+                    "mode": "single",
+                    "sort": "none"
                 }
             },
-            "targets": [{
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
                     "exemplar": true,
                     "expr": "histogram_quantile(0.99, sum(rate(aeris_apiserver_get_range_window_size_seconds_bucket[5m])) by (le))",
                     "interval": "",
@@ -3197,6 +3548,9 @@
                     "refId": "A"
                 },
                 {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
                     "exemplar": true,
                     "expr": "histogram_quantile(0.95, sum(rate(aeris_apiserver_get_range_window_size_seconds_bucket[5m])) by (le))",
                     "hide": false,
@@ -3205,6 +3559,9 @@
                     "refId": "B"
                 },
                 {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
                     "exemplar": true,
                     "expr": "histogram_quantile(0.50, sum(rate(aeris_apiserver_get_range_window_size_seconds_bucket[5m])) by (le))",
                     "hide": false,
@@ -3218,7 +3575,10 @@
         },
         {
             "collapsed": false,
-            "datasource": null,
+            "datasource": {
+                "type": "datasource",
+                "uid": "grafana"
+            },
             "gridPos": {
                 "h": 1,
                 "w": 24,
@@ -3227,6 +3587,15 @@
             },
             "id": 23,
             "panels": [],
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "datasource",
+                        "uid": "grafana"
+                    },
+                    "refId": "A"
+                }
+            ],
             "title": "GRPC Calls",
             "type": "row"
         },
@@ -3235,7 +3604,9 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "uid": "$DATASOURCE"
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -3262,7 +3633,7 @@
                 "alertThreshold": true
             },
             "percentage": false,
-            "pluginVersion": "8.1.2",
+            "pluginVersion": "10.0.1",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -3270,16 +3641,19 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
-                "expr": "rate(grpc_server_handled_total{grpc_method=\"Publish\", grpc_code=\"OK\"}[5m])",
-                "interval": "",
-                "legendFormat": "{{ kubernetes_pod_name }}",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "expr": "rate(grpc_server_handled_total{grpc_method=\"Publish\", grpc_code=\"OK\"}[5m])",
+                    "interval": "",
+                    "legendFormat": "{{ kubernetes_pod_name }}",
+                    "refId": "A"
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "# grpc successful publish requests",
             "tooltip": {
                 "shared": true,
@@ -3288,32 +3662,24 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
@@ -3321,7 +3687,9 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "uid": "$DATASOURCE"
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -3348,7 +3716,7 @@
                 "alertThreshold": true
             },
             "percentage": false,
-            "pluginVersion": "8.1.2",
+            "pluginVersion": "10.0.1",
             "pointradius": 2,
             "points": false,
             "renderer": "flot",
@@ -3356,16 +3724,19 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
-                "expr": "rate(grpc_server_handled_total{grpc_method=\"Publish\", grpc_code!=\"OK\"}[5m]) > 0",
-                "interval": "",
-                "legendFormat": "{{ kubernetes_pod_name }} / {{ grpc_code }}",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "expr": "rate(grpc_server_handled_total{grpc_method=\"Publish\", grpc_code!=\"OK\"}[5m]) > 0",
+                    "interval": "",
+                    "legendFormat": "{{ kubernetes_pod_name }} / {{ grpc_code }}",
+                    "refId": "A"
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "# grpc error publish requests",
             "tooltip": {
                 "shared": true,
@@ -3374,32 +3745,24 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
@@ -3407,7 +3770,9 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "uid": "$DATASOURCE"
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -3442,16 +3807,19 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
-                "expr": "rate(grpc_server_handled_total{grpc_method=\"$grpc_method\", grpc_code=\"OK\"}[5m]) > 0",
-                "interval": "",
-                "legendFormat": "{{ kubernetes_pod_name }}",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "expr": "rate(grpc_server_handled_total{grpc_method=\"$grpc_method\", grpc_code=\"OK\"}[5m]) > 0",
+                    "interval": "",
+                    "legendFormat": "{{ kubernetes_pod_name }}",
+                    "refId": "A"
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "# grpc successful $grpc_method requests (based on GRPC method)",
             "tooltip": {
                 "shared": true,
@@ -3460,34 +3828,26 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "$$hashKey": "object:257",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "$$hashKey": "object:258",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
@@ -3495,7 +3855,9 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "uid": "$DATASOURCE"
+            },
             "fill": 1,
             "fillGradient": 0,
             "gridPos": {
@@ -3530,16 +3892,19 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
-                "expr": "rate(grpc_server_handled_total{grpc_method=\"$grpc_method\", grpc_code!=\"OK\"}[5m]) > 0",
-                "interval": "",
-                "legendFormat": "{{ kubernetes_pod_name }} / {{ grpc_code }}",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "expr": "rate(grpc_server_handled_total{grpc_method=\"$grpc_method\", grpc_code!=\"OK\"}[5m]) > 0",
+                    "interval": "",
+                    "legendFormat": "{{ kubernetes_pod_name }} / {{ grpc_code }}",
+                    "refId": "A"
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "# grpc error $grpc_method requests (based on GRPC method)",
             "tooltip": {
                 "shared": true,
@@ -3548,39 +3913,34 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "$$hashKey": "object:257",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "$$hashKey": "object:258",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "collapsed": false,
-            "datasource": null,
+            "datasource": {
+                "type": "datasource",
+                "uid": "grafana"
+            },
             "gridPos": {
                 "h": 1,
                 "w": 24,
@@ -3589,6 +3949,15 @@
             },
             "id": 10,
             "panels": [],
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "datasource",
+                        "uid": "grafana"
+                    },
+                    "refId": "A"
+                }
+            ],
             "title": "Process CPU/Memory",
             "type": "row"
         },
@@ -3597,7 +3966,9 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "uid": "$DATASOURCE"
+            },
             "fieldConfig": {
                 "defaults": {
                     "links": []
@@ -3639,20 +4010,23 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
-                "exemplar": true,
-                "expr": "rate(container_cpu_user_seconds_total[5m])",
-                "format": "time_series",
-                "interval": "",
-                "intervalFactor": 2,
-                "legendFormat": "",
-                "refId": "A",
-                "step": 2
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "exemplar": true,
+                    "expr": "rate(container_cpu_user_seconds_total[5m])",
+                    "format": "time_series",
+                    "interval": "",
+                    "intervalFactor": 2,
+                    "legendFormat": "",
+                    "refId": "A",
+                    "step": 2
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "CPU usage",
             "tooltip": {
                 "shared": true,
@@ -3661,34 +4035,26 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "$$hashKey": "object:675",
                     "format": "percentunit",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "$$hashKey": "object:676",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
@@ -3696,7 +4062,9 @@
             "bars": false,
             "dashLength": 10,
             "dashes": false,
-            "datasource": "$DATASOURCE",
+            "datasource": {
+                "uid": "$DATASOURCE"
+            },
             "fieldConfig": {
                 "defaults": {
                     "links": []
@@ -3738,20 +4106,23 @@
             "spaceLength": 10,
             "stack": false,
             "steppedLine": false,
-            "targets": [{
-                "exemplar": true,
-                "expr": "go_memstats_heap_alloc_bytes{kubernetes_pod_name=~\"apiserver.*\"}",
-                "format": "time_series",
-                "interval": "",
-                "intervalFactor": 2,
-                "legendFormat": "{{ kubernetes_pod_name }}",
-                "refId": "A",
-                "step": 2
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "$DATASOURCE"
+                    },
+                    "exemplar": true,
+                    "expr": "go_memstats_heap_alloc_bytes{kubernetes_pod_name=~\"apiserver.*\"}",
+                    "format": "time_series",
+                    "interval": "",
+                    "intervalFactor": 2,
+                    "legendFormat": "{{ kubernetes_pod_name }}",
+                    "refId": "A",
+                    "step": 2
+                }
+            ],
             "thresholds": [],
-            "timeFrom": null,
             "timeRegions": [],
-            "timeShift": null,
             "title": "Heap usage",
             "tooltip": {
                 "shared": true,
@@ -3760,39 +4131,34 @@
             },
             "type": "graph",
             "xaxis": {
-                "buckets": null,
                 "mode": "time",
-                "name": null,
                 "show": true,
                 "values": []
             },
-            "yaxes": [{
+            "yaxes": [
+                {
                     "$$hashKey": "object:728",
                     "format": "bytes",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 },
                 {
                     "$$hashKey": "object:729",
                     "format": "short",
-                    "label": null,
                     "logBase": 1,
-                    "max": null,
-                    "min": null,
                     "show": true
                 }
             ],
             "yaxis": {
-                "align": false,
-                "alignLevel": null
+                "align": false
             }
         },
         {
             "collapsed": false,
-            "datasource": null,
+            "datasource": {
+                "type": "datasource",
+                "uid": "grafana"
+            },
             "gridPos": {
                 "h": 1,
                 "w": 24,
@@ -3801,11 +4167,22 @@
             },
             "id": 36,
             "panels": [],
+            "targets": [
+                {
+                    "datasource": {
+                        "type": "datasource",
+                        "uid": "grafana"
+                    },
+                    "refId": "A"
+                }
+            ],
             "title": "Spanner",
             "type": "row"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
@@ -3842,9 +4219,9 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
-                                "color": "green",
-                                "value": null
+                        "steps": [
+                            {
+                                "color": "green"
                             },
                             {
                                 "color": "red",
@@ -3866,25 +4243,33 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
                     "mode": "single"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "rate(spanner_ds_creation_error{app=\"apiserver\", app_kubernetes_io_part_of=\"aeris\"}[5m])",
-                "interval": "",
-                "legendFormat": "{{ kubernetes_pod_name }}",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "rate(spanner_ds_creation_error{app=\"apiserver\", app_kubernetes_io_part_of=\"aeris\"}[5m])",
+                    "interval": "",
+                    "legendFormat": "{{ kubernetes_pod_name }}",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Spanner dataset creation errors",
             "type": "timeseries"
         },
         {
-            "datasource": "${DATASOURCE}",
+            "datasource": {
+                "uid": "${DATASOURCE}"
+            },
             "fieldConfig": {
                 "defaults": {
                     "color": {
@@ -3921,9 +4306,9 @@
                     "mappings": [],
                     "thresholds": {
                         "mode": "absolute",
-                        "steps": [{
-                                "color": "green",
-                                "value": null
+                        "steps": [
+                            {
+                                "color": "green"
                             },
                             {
                                 "color": "red",
@@ -3945,39 +4330,44 @@
                 "legend": {
                     "calcs": [],
                     "displayMode": "list",
-                    "placement": "bottom"
+                    "placement": "bottom",
+                    "showLegend": true
                 },
                 "tooltip": {
                     "mode": "single"
                 }
             },
-            "targets": [{
-                "exemplar": true,
-                "expr": "rate(spanner_ds_creation_failed_precondition_error{app_kubernetes_io_name=\"apiserver\", app_kubernetes_io_part_of=\"aeris\"}[5m])",
-                "interval": "",
-                "legendFormat": "{{ kubernetes_pod_name }}",
-                "queryType": "randomWalk",
-                "refId": "A"
-            }],
+            "targets": [
+                {
+                    "datasource": {
+                        "uid": "${DATASOURCE}"
+                    },
+                    "exemplar": true,
+                    "expr": "rate(spanner_ds_creation_failed_precondition_error{app_kubernetes_io_name=\"apiserver\", app_kubernetes_io_part_of=\"aeris\"}[5m])",
+                    "interval": "",
+                    "legendFormat": "{{ kubernetes_pod_name }}",
+                    "queryType": "randomWalk",
+                    "refId": "A"
+                }
+            ],
             "title": "Spanner dataset creation failed precondition error",
             "type": "timeseries"
         }
     ],
     "refresh": false,
-    "schemaVersion": 30,
+    "schemaVersion": 38,
     "style": "dark",
     "tags": [
         "aeris"
     ],
     "templating": {
-        "list": [{
+        "list": [
+            {
                 "current": {
                     "selected": false,
                     "text": "Prometheus",
                     "value": "Prometheus"
                 },
-                "description": null,
-                "error": null,
                 "hide": 0,
                 "includeAll": false,
                 "label": "Datasource",
@@ -3992,17 +4382,17 @@
                 "type": "datasource"
             },
             {
-                "allValue": null,
                 "current": {
                     "isNone": true,
                     "selected": false,
                     "text": "None",
                     "value": ""
                 },
-                "datasource": "$DATASOURCE",
+                "datasource": {
+                    "type": "prometheus",
+                    "uid": "$DATASOURCE"
+                },
                 "definition": "label_values(grpc_server_handled_total{app_kubernetes_io_name=\"apiserver\",app_kubernetes_io_part_of=\"aeris\"}, grpc_method)",
-                "description": null,
-                "error": null,
                 "hide": 0,
                 "includeAll": false,
                 "label": "GRPC Method",
@@ -4053,8 +4443,9 @@
             "30d"
         ]
     },
-    "timezone": "browser",
+    "timezone": "utc",
     "title": "API Server Metrics",
     "uid": "WwmwsQ4nk",
-    "version": 4
+    "version": 1,
+    "weekStart": ""
 }
