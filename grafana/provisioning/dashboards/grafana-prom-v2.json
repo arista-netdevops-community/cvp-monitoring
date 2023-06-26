@@ -3,7 +3,7 @@
     "list": [
       {
         "builtIn": 1,
-        "datasource": "-- Grafana --",
+        "datasource": "${DATASOURCE}",
         "enable": true,
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
@@ -1866,7 +1866,7 @@
     ]
   },
   "timezone": "",
-  "title": "case data",
+  "title": "Infrastructure",
   "uid": "YpXi8YWGz",
   "version": 2
 }
