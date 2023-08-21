@@ -2,7 +2,7 @@
 
 CVP runs on CentOS and prometheus node-exporter is used to collect various metrics both from the VM (memory and CPU usage, disk latency, writes/reads per second, etc) and the application’s components. These metrics can be viewed by accessing the Prometheus UI or creating dashboards in Grafana.
 
-# Exposing Prometheus on CloudVision
+## Exposing Prometheus on CloudVision
 
 1\. To be able to setup the Prometheus datasource in Grafana, TCP 9090 has to be allowed on the primary node’s firewalld (Note that in newer releases this is already enabled). There are two ways to do this:
 
@@ -45,31 +45,31 @@ After applying this command a success message should be printed on stdout.
 
 Quickly test if we can connect to that port from the remote end:
 
-```
+```shell
 nc -zv 192.0.2.100 9090
 Connection to 192.0.2.100 port 9090 [tcp/websm] succeeded!
 ```
 
 If the response is “Connection refused” it would mean that there’s a Firewall in the middle that’s blocking the connection.
 
-# Building Grafana container
+## Building Grafana container
 
 If you don't already have a container, after cloning this repo, docker-compose can be used to bring up the containers:
 
 1\. `git clone https://github.com/arista-netdevops-community/cvp-monitoring.git`
 
-2\. `cd cvp-monitoring` 
+2\. `cd cvp-monitoring`
 
-3\. Run `docker-compose up -d`. 
+3\. Run `docker-compose up -d`.
 
-That should build a local Prometheus and Grafana container preloaded with the dashboards and various metrics. 
+That should build a local Prometheus and Grafana container preloaded with the dashboards and various metrics.
 
-> Note that the local Prometheus container would be only needed if offline the CVP data would want to be checked out and not necessary 
+> Note that the local Prometheus container would be only needed if offline the CVP data would want to be checked out and not necessary
 > for real-time monitoring.
 
 The next steps would be to add your Prometheus data-source described in steps 1-3 in [Adding Prometheus to your Grafana instance](#adding-prometheus-to-your-grafana-instance). The rest of the steps (4-10) would be only required for existing Grafana instances where the dashboards are not loaded.
 
-# Adding Prometheus to your Grafana instance
+## Adding Prometheus to your Grafana instance
 
 1\. Access your Grafana UI and add a new data source by clicking on the Gear icon on the left pane and select `Data Sources`
 
@@ -117,9 +117,16 @@ Simply renaming the UID to an arbitrary name is enough.
 
 ![img8](./static/img8.png)
 
-# Loading offline Prometheus data
+## Loading offline Prometheus data
 
-1\. Download this project
+1\. Download this project either using git clone
+
+`git clone https://github.com/arista-netdevops-community/cvp-monitoring.git`
+
+or using the Download button
+
+![downloadzip](static/downloadzip.png)
+
 2\. Get the Prometheus tarball from CVP.
 
 Option1)
@@ -147,11 +154,11 @@ e.g.: `cvpi_debug_all_20220307224437/prometheus/prometheus_data.tar.gz`
 
 5\. Access grafana at `localhost:3000` using `admin/arista` (default credentials as per the docker compose file but can be changed to anything) or prometheus at `localhost:9090`
 
-# Useful metrics
+## Useful metrics
 
 If using  ssh tunnel e.g.: `ssh -nNT -L 9090:localhost:9090 root@<CVP_IP>` the following links will work directly. Otherwise, replace `localhost` with your CloudVision FQDN or IP.
 
-## General server metrics:
+## General server metrics
 
 Load Average: [node_load1](http://localhost:9090/graph?g0.range_input=12h&g0.expr=node_load1&g0.tab=0)
 
@@ -169,7 +176,7 @@ Percent disk used: [100 - ((node_filesystem_avail_bytes * 100) / node_filesystem
 
 Available memory: [node_memory_MemAvailable_bytes](http://localhost:9090/graph?g0.expr=node_memory_MemAvailable_bytes&g0.tab=0&g0.stacked=0&g0.show_exemplars=0&g0.range_input=1w)
 
-## Per-process metrics:
+## Per-process metrics
 
 memory utilization: [process_resident_memory_bytes](http://localhost:9090/graph?g0.range_input=1d&g0.expr=process_resident_memory_bytes&g0.tab=0)
 
@@ -179,10 +186,11 @@ Kafka lag for dispatcher: [max(kafka_log_log_value{topic="postDB_v2", name="LogE
 The Kafka LAG, shows us how many messages are in the queue per Kafka partitions. Having high number of messages in the queue can lead to performance issues, either because of resource constraints or more devices are streaming than are supported and the scale limit is being hit.
 
 ## Flow Data collection
+
 number of flows per second for the last 5 minutes: [sum(rate(clover_ingest_num_notifications_received{type=~"ipfix|int|greent"}[5m]))](http://localhost:9090/graph?g0.range_input=1w&g0.expr=sum(rate(clover_ingest_num_notifications_received%7Btype%3D~%22ipfix%7Cint%7Cgreent%22%7D%5B5m%5D))&g0.tab=0)
 
 Many more are included in the json files in `./grafana/provisioning/dashboards/`.
 
-# Ask a question
+## Ask a question
 
 Easiest way to get support is to open an [issue](https://github.com/arista-netdevops-community/cvp-monitoring/issues).
